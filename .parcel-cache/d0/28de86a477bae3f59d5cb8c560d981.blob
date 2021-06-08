@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Example</title>
+    <link rel="stylesheet" href="4a54a54d6b5da9065284dc9f634a2eda">
+  </head>
+  <header id="header">
+    <h1 id="title">What's happening to yourself?</h1>
+  </header>
+  <body>
+    <main>
+      <form id="survey-form">
+        <div class="form-inputs">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter your name" required="">
+        </div>
+        <div class="form-inputs">
+          <label id="number-label">Age</label>
+          <input type="number" name="age" id="age" placeholder="Enter your age" min="1" max="135" required="">
+        </div>
+        <div class="form-inputs">
+          <label id="email-label">E-mail Address</label>
+          <input type="email" name="email" id="email" placeholder="Enter your name" required="">
+        </div>
+        <div class="form-group">
+          <p>Are you happy?</p>
+          <select id="dropdown" name="hapiness" class="form-control" required="">
+            <option disabled="" selected="" value="">Choose your feeling</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>
+            Which of the followings options do you consider the best to stay
+            happy?
+          </p>
+          <label>
+            <input name="user-recommend" value="sports" type="radio" class="input-radio" checked="">Doing sports often</label>
+          <label>
+            <input name="user-recommend" value="arts" type="radio" class="input-radio">Taking arts activities</label>
+
+          <label><input name="user-recommend" value="couch" type="radio" class="input-radio">Hanging out with friends</label>
+        </div>
+        <div class="form-group">
+          <p>
+            Would you like to do anything from the next options to improve your
+            mood?
+            <span class="clue">(Check all that apply)</span>
+          </p>
+
+          <input type="checkbox" name="prefer" id="excersice-oftener" value="excersice-oftener" class="input-checkbox">
+          <label>Exercise more often</label>
+          <label>
+            <input name="prefer" value="art-classes" type="checkbox" class="input-checkbox">Art Classes</label>
+        </div>
+
+        <div class="form-group">
+          <p>Comments?</p>
+          <textarea id="comments" class="input-textarea" name="comment" placeholder="We would love to hear from you..."></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </main>
+    <script src="1ddd8eccf2709bb27391de6285679c08" charset="utf-8"></script>
+  </body>
+</html>

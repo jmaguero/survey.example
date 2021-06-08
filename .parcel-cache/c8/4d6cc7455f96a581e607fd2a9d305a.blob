@@ -1,0 +1,22 @@
+
+//create variables to catch data from form.
+//check how to catch values from dropdown, radio buttons and checkbox
+const comments = document.querySelector('#comments');
+const name = document.querySelector('#name');
+const age = document.querySelector('#age');
+const email = document.querySelector('#email');
+const comments = document.querySelector('#comments');
+
+// document.querySelector('input[type=checkbox][name=gender]:checked').value
+
+//create an object with data from form.
+
+form.addEventListener('submit', formSubmitted);
+async function formSubmitted(event) {
+  event.preventDefault();
+  try {
+    // post method
+  } catch (error) {
+    //manage the error
+  }
+}

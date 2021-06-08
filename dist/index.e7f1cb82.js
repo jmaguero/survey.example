@@ -1,0 +1,2 @@
+document.querySelector("form").addEventListener("submit",(function(e){e.preventDefault();const t=new FormData(e.target),n=Object.fromEntries(t.entries());n.prefer=t.getAll("prefer");const o=JSON.stringify(n,null,2);!async function(e){await fetch(" https://crudcrud.com/api/b5b1c71a26564f71834877e8f17fb56a/formsubmit",{method:"POST",headers:{"Content-Type":"application/json"},body:`${e}`})}(o),console.log(o)}));
+//# sourceMappingURL=index.e7f1cb82.js.map

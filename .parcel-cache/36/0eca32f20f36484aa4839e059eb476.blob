@@ -1,0 +1,54 @@
+function handleSubmit(event) {
+  event.preventDefault();
+
+  const data = new FormData(event.target);
+
+  const formEntries = Object.fromEntries(data.entries());
+  //get all checkboxes values
+  formEntries.prefer = data.getAll("prefer");
+
+  const formJson = JSON.stringify(formEntries, null, 2);
+  console.log(formJson);
+}
+const form = document.querySelector('form');
+form.addEventListener('submit', handleSubmit);
+/*
+//create variables to catch data from form.
+//check how to catch values from dropdown, radio buttons and checkbox
+const comments = document.querySelector('#comments');
+const nm = document.querySelector('#name');
+const age = document.querySelector('#age');
+const email = document.querySelector('#email');
+const submit = document.querySelector('#submit')
+//how to get all the selected boxes?
+// creates an object with all the elements selected from checkbox
+
+function getSelectedCheckboxValues() {
+  const checkboxes = document.querySelectorAll(`input[type=checkbox][name="prefer"]:checked`).value
+  let preferToDo = [];
+  checkboxes.forEach((checkbox) => {
+    preferToDo.push(checkbox.value);
+  });
+  return preferToDo;
+}
+
+//create an object with data from form.
+
+submit.addEventListener('click', formSubmitted);
+async function formSubmitted(event) {
+  event.preventDefault();
+  getSelectedCheckboxValues();
+  const formValues = {
+    nm,
+    age,
+    email,
+    preferToDo,
+    comments,
+  };
+  return console.log(formValues);
+  try {
+    // post method
+  } catch (error) {
+    //manage the error
+  }
+} */

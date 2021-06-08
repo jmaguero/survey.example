@@ -1,0 +1,40 @@
+
+//create variables to catch data from form.
+//check how to catch values from dropdown, radio buttons and checkbox
+const comments = document.querySelector('#comments');
+const nm = document.querySelector('#name');
+const age = document.querySelector('#age');
+const email = document.querySelector('#email');
+const comments = document.querySelector('#comments');
+//how to get all the selected boxes?
+// creates an object with all the elements selected from checkbox
+
+function getSelectedCheckboxValues() {
+  const checkboxes = document.querySelectorAll(`input[type=checkbox][name="prefer"]:checked`).value
+  let preferToDo = [];
+  checkboxes.forEach((checkbox) => {
+    preferToDo.push(checkbox.value);
+  });
+  return preferToDo;
+}
+
+//create an object with data from form.
+
+form.addEventListener('submit', formSubmitted);
+async function formSubmitted(event) {
+  event.preventDefault();
+  getSelectedCheckboxValues();
+  const formValues = {
+    nm,
+    age,
+    email,
+    preferToDo,
+    comments,
+  };
+  console.log(formValues);
+  try {
+    // post method
+  } catch (error) {
+    //manage the error
+  }
+}
